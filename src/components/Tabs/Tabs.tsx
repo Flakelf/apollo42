@@ -4,30 +4,26 @@ import cx from 'classnames'
 import s from './Tabs.module.scss'
 
 type TabsProps = {
-  titles: string[]
+  selectedTab: string
+  tabs: { title: string; onClick: () => void }[]
 }
 
-const Tabs: React.FC<TabsProps> = ({ titles }) => {
-  const [selectedTab, setSelectedTab] = React.useState(0)
+const Tabs: React.FC<TabsProps> = ({ tabs, selectedTab }) => (
+  <div className={s.container}>
+    <div className={s.tabs}>
+      {tabs.map((tab, i) => {
+        const className = cx(s.tabButton, {
+          [s.selected]: tab.title === selectedTab,
+        })
 
-  const createSelectedClass = (index: number) =>
-    cx(s.tabButton, { [s.selected]: index === selectedTab })
-
-  return (
-    <div className={s.container}>
-      <div className={s.tabs}>
-        {titles.map((title, i) => (
-          <button
-            key={i}
-            className={createSelectedClass(i)}
-            onClick={() => setSelectedTab(i)}
-          >
-            <span>{title}</span>
+        return (
+          <button key={i} className={className} onClick={tab.onClick}>
+            <span>{tab.title}</span>
           </button>
-        ))}
-      </div>
+        )
+      })}
     </div>
-  )
-}
+  </div>
+)
 
 export { Tabs }
