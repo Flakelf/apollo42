@@ -1,0 +1,6 @@
+export { default as Apollo42 } from './apollo42.svg'
+export { default as Search } from './search.svg'
+export { default as Likes } from './likes.svg'
+export { default as Comments } from './comments.svg'
+export { default as Eye } from './eye.svg'
+export { default as GlamourBurger } from './glamour-burger.svg'

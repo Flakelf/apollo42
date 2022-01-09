@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+
+  @include tablet-and-lower {
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.input {
+  width: 100%;
+  max-width: 432px;
+  min-width: 260px;
+
+  @include tablet-and-lower {
+    display: none;
+  }
+}
+
+.links {
+  margin: 0 30px;
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet-and-lower {
+    display: none;
+  }
+
+  a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $black;
+    opacity: 0.5;
+
+    &:not(:first-of-type) {
+      margin-left: 20px;
+    }
+  }
+}
+
+.button {
+  width: 272px;
+  min-width: 178px;
+
+  @include tablet-and-lower {
+    display: none;
+  }
+}
+
+.glamourBurger {
+  display: none;
+
+  @include tablet-and-lower {
+    display: block;
+  }
+}

@@ -1,0 +1,201 @@
+.container {
+  display: flex;
+  margin-top: 80px;
+
+  @include tablet-portrait-and-lower {
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  flex: 1;
+
+  min-width: 335px;
+  min-height: 335px;
+
+  max-width: 566px;
+  max-height: 566px;
+
+  @include tablet-portrait-and-lower {
+    width: 335px;
+    height: 335px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 74px;
+  flex: 1;
+
+  @include tablet-portrait-and-lower {
+    margin: 20px 0 0 0;
+  }
+}
+
+.author {
+  p {
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $black;
+    opacity: 0.5;
+  }
+}
+
+.NFTName {
+  p {
+    margin-top: 10px;
+    font-family: Syncopate;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: $black;
+  }
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.ownedBy {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include desktop-lower {
+    align-self: flex-start;
+  }
+
+  p {
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $blackOpacity;
+  }
+
+  span {
+    font-family: Syncopate;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 15px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: $black;
+    margin-left: 10px;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+  @include desktop-lower {
+    margin: 20px 0 0 0;
+  }
+}
+
+.data {
+  display: flex;
+  align-items: center;
+
+  @include desktop-lower {
+    flex-direction: column;
+  }
+}
+
+.rarityScore {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 10px;
+
+  p {
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $blackOpacity;
+  }
+
+  span {
+    font-family: Syncopate;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $black;
+    margin-left: 10px;
+
+    @include tablet-portrait-and-lower {
+      margin: 0;
+    }
+  }
+}
+
+.socialCounter {
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  background: $gradientSecond;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:not(:first-of-type) {
+    margin-left: 10px;
+  }
+
+  svg {
+    margin-right: 5px;
+  }
+}
+
+.about {
+  margin-top: 40px;
+
+  @include tablet-portrait-and-lower {
+    margin-bottom: 40px;
+  }
+}
+
+.aboutTitle {
+  font-family: Syncopate;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: $black;
+
+  span {
+    background: $gradientSecond;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.aboutText {
+  margin-top: 20px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: $black;
+  opacity: 0.8;
+}

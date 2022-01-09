@@ -1,0 +1,13 @@
+.container {
+  margin: 0 auto;
+  padding: 0 80px;
+  max-width: 1440px;
+
+  @media (max-width: 1171px) {
+    padding: 0 40px;
+  }
+
+  @include tablet-portrait-and-lower {
+    padding: 0 20px;
+  }
+}

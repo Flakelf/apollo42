@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  position: relative;
+  margin-top: 27px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.tabButton {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $blackOpacity;
+  flex: 1;
+  position: relative;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  cursor: not-allowed;
+
+  @include tablet-landscape {
+    font-size: 1.2vw;
+  }
+
+  @include tablet-portrait-and-lower {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: $gradientSecond;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    opacity: 0.1;
+  }
+
+  &.selected {
+    background: $gradientSecond;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}

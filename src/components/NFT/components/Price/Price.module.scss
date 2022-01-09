@@ -1,0 +1,57 @@
+.gradient {
+  background: linear-gradient(
+    96.63deg,
+    #f368e0 -18.97%,
+    #5f27cd 56.75%,
+    #48dbfb 134.06%
+  );
+  margin-top: 40px;
+  padding: 3px;
+  padding-top: 1px;
+  border-radius: 14px;
+}
+
+.container {
+  padding: 30px;
+  background: $gradientThird;
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+}
+
+.currentPrice {
+  color: $blackOpacity;
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.priceAndAvailable {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  font-family: Syncopate;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.available {
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: $blackOpacity;
+  margin-left: 20px;
+}
+
+.button {
+  margin-top: 20px;
+  width: 100%;
+}
