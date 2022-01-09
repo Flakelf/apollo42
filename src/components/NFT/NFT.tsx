@@ -72,16 +72,22 @@ const NFT: React.FC<NFTProps> = ({
               </p>
             </div>
             <div className={s.socialCounter}>
-              <Likes />
-              <p>{likes}</p>
+              <span>
+                <Likes />
+                <p>{likes}</p>
+              </span>
             </div>
             <div className={s.socialCounter}>
-              <Comments />
-              <p>{comments}</p>
+              <span>
+                <Comments />
+                <p>{comments}</p>
+              </span>
             </div>
             <div className={s.socialCounter}>
-              <Eye />
-              <p>{kFormatter(viewed)}</p>
+              <span>
+                <Eye />
+                <p>{kFormatter(viewed)}</p>
+              </span>
             </div>
           </div>
         </div>

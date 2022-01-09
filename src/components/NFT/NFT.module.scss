@@ -145,16 +145,21 @@
 }
 
 .socialCounter {
-  font-family: Raleway;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  background: $gradientSecond;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  span {
+    display: flex;
+  }
+
+  p {
+    float: right;
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    background: $gradientSecond;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   &:not(:first-of-type) {
     margin-left: 10px;

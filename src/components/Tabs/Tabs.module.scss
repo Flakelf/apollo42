@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: space-between;
 }
 
 .tabButton {
@@ -17,19 +18,22 @@
   line-height: 21px;
   text-transform: uppercase;
   color: $blackOpacity;
-  flex: 1;
   position: relative;
   height: 32px;
-  display: flex;
-  justify-content: center;
-  cursor: not-allowed;
+  width: 100%;
+
+  span {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+  }
 
   @include tablet-landscape {
     font-size: 1.2vw;
   }
 
   @include tablet-portrait-and-lower {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 16px;
   }
@@ -46,10 +50,12 @@
   }
 
   &.selected {
-    background: $gradientSecond;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;
+    span {
+      background: $gradientSecond;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+    }
 
     &:after {
       opacity: 1;
